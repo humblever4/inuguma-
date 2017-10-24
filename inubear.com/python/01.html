@@ -5,7 +5,7 @@
 		<meta name="application-name" content="犬熊">
 		<meta name="apple-mobile-web-app-title" content="犬熊">
 		<meta name="viewport" content="width=device-width">
-		<title>犬熊-python3</title>
+		<title>犬熊-python</title>
 		<link rel="stylesheet" href="stylesheet.css">
 		<link rel="icon" href="pic/inubearicon.png">
 		<link rel="apple-touch-icon" href="pic/inubearicon.png">
@@ -20,7 +20,8 @@
 					<li><a href="#1">１．#,print(),文字列,数値,計算</a></li>
 					<li><a href="#2">２．変数の定義,規格,意義</a></li>
 					<li><a href="#3">３．変数の更新</a></li>
-					<li><a href="#4">４．タイトル</a></li>
+					<li><a href="#4">４．文字列の連結,データ型,str,int</a></li>
+					<li><a href="#5">５．</a></li>
 				</ul>
 			</nav>
 				<nav style="float: left; list-style: noen;">
@@ -42,13 +43,19 @@
 			</ul>
 コピペ用-->
 
-			<p id="4">４．タイトル</p>
+			<p id="5">５．タイトル</p>
+			<ul>
+				<li>テキスト</li>
+				<li>テキスト</li>
+			</ul>
+
+			<p id="4">４．文字列の連結,データ型,str,int</p>
 			<ul>
 				<li><mark>文字列の連結</mark>→<br>print(<b>"hello"+"python"</b>)<br>name="john"<br>print(<b>"my name is"+name</b>)<br><b>数値の計算で用いた＋記号は計算だけでなく文字列の連結も行うことができる。他、変数と文字列や変数と変洲も連結できる。</b></li>
 				<li><mark>データ型</mark>→<br>"hello python"-<b>文字列型</b><br>3-<b>数値型</b><br><b>文字列型や数値型など様々なデータの種類があり、データ型を呼ばれている。</b></li>
 			　<li><mark>データ型の違い</mark>→<br>print(5 + 7)<br>#結果｢12｣←<b>数値の計算</b><br>print("5" + "7")<br>"#結果｢57｣←<b>文字列の連結</b><br><b>データ型が異なるとコードは異なる動作をする。</b></li>
-			　<li><mark>型変換str</mark>→<br>price = 100<br>print("りんごの価格は" + price + "円です")<br>#結果エラー←<b>文字型を数値型なので連結できない</b><br>price =100<br>print("りんごの価格は" + str(price) + "円です")<br>#結果りんごの価格は100円です←<b>文字型同士なので連結できる</b><br><b>上のようにデータ型を変換することを「型変換」といい、数値型から文字列型に変換するには「str」を用いる</b></li>
-			　<li></li>
+			　<li><mark>型変換str</mark>→<br>price = 100<br>print("りんごの価格は" + price + "円です")<br>#結果エラー←<b>文字型を数値型なので連結できない</b><br>price =100<br>print("りんごの価格は" + str(price) + "円です")<br>#結果りんごの価格は100円です←<b>文字型同士なので連結できる</b><br><b>上のようにデータ型を変換することを「型変換」といい、数値型から文字列型に変換するには「str」を用いる。str=string（読み＝ストリング、意味＝一続き、一列。</b></li>
+			　<li><mark>型変換int</mark>→<br>count = "3"<br>price = 100<br>total_price = price = <b>int</b>(count)<br>print(total_price)<br>#結果300<br><b>上のように文字列型を数値型に変換するにはintを用いる</b>int=integer（読み＝インテジャー、意味＝整数）。</li>
 			</ul>
 
 			<p id="3">３．変数の更新</p>
