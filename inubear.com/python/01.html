@@ -14,7 +14,7 @@
 		
 		<header>
 			<h1>python3</h1>
-<!--枠内に収まるように二段組みに-->
+
 			<nav style="float: left; list-style: none;">
 				<ul>
 					<li><a href="#1">１．#,print(),文字列,数値,計算</a></li>
@@ -24,8 +24,8 @@
 					<li><a href="#5">５．条件分岐,if文,if文条件式(比較演算子==,!=),インデント</a></li>
 					<li><a href="#6">６．if文と真偽値,比較演算子(&lt;,&lt;=,&gt;,&gt;=),else,elif</a></li>
 					<li><a href="#7">７．論理演算子(and,or),not(条件式)</a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
+					<li><a href="#8">８．入力を受け取る(input),入力した値の型変換</a></li>
+					<li><a href="#9">９．リスト(変数に代入,要素を取得・更新・追加)</a></li>
 					<li><a href="#"></a></li>
 				</ul>
 			</nav>
@@ -41,17 +41,19 @@
 			</ul>
 コピペ用-->
 
-			<p id="9">１．タイトル</p>
+			<p id="9">９．リスト(変数に代入,要素を取得・更新・追加)</p>
 			<ul>
-				<li>テキスト</li>
-				<li>テキスト</li>
+				<li><mark>リスト</mark>→<br><b>リストの作り方</b><br>[要素1,要素2,要素3]<br><br>＃文字列のリスト<br>["pasta","curry",sushi]<br>＃数値のリスト<br>[1,3,5,8,13,21]<br>＃文字列と数値のリスト<br>[apple,banana,200,300]<br><b>複数のデータをまとめて管理するにはリストというものを用います。</b>複数のデータをまとめて管理するにはリストというものを用います。リストは[要素1, 要素2, ...]のように作ります。リストに入っているそれぞれの値のことを要素と呼びます。リストを使うと、複数の文字列や複数の数値を1つのものとして管理することができます。</li>
+				<li><mark>リストを変数に代入</mark>→<br>foods = [pasta,curry,sushi]<br>print(foods)<br>＃出力結果[pasta,curry,sushi]←リストがそのまま出力さえる<br>リストも1つの値なので変数に代入することができます。このとき、<b>リストを代入する変数名は慣習上複数形にすることが多い</b>ので、覚えておきましょう。</li>
+				<li><mark>リストの要素を取得</mark>→<br><pre>foods = [pasta,curry,sushi]<br>           0     1     2  ←#<b>インデックス番号</b><br>print("好きな食べ物は" + foods[2] + "です”）<br>#結果-好きな食べ物はsushiです</pre><br>リストの要素には、前から順に「0, 1, 2,・・・」と数字が割り振られている。これをインデックス番号という。<b>インデックス番号は0から始まる</b>点に注意。リストの各要素は、<b>リスト[インデックス番号]</b>とすることで取得することができる。</li>
+				<li><mark>リストの要素を更新</mark>→<br>foods = [pasta,curry,sushi]<br>foods[1] = "pizza"<br>print(foods)<br>＃出力結果<br>[pasta,<b>pizza</b>,sushi]<br><b>「リスト[インデックス番号] = 値」とすることで、リストの指定したインデックス番号の要素を更新することができる。</b></li>
+				<li><mark>リストの要素を追加</mark>→<br>foods = [pasta,curry,sushi]<br>foods.append("pizza")<br>＃リストの末尾に要素を追加<br>prit(foods)<br>＃出力結果<br>[pasta,curry,sushi,<b>pizza</b>]<br><b>「リスト.append(値)」とすることで、すでに定義されているリストの末尾に新たな要素を追加することができる。</b>append(意味＝付加する、読み＝アペンド)。</li>
 			</ul>
 
-			<p id="8">１．タイトル</p>
+			<p id="8">８．入力を受け取る(input),入力した値の型変換</p>
 			<ul>
 				<li><mark>入力を受け取る(input)</mark>→<br>input_count = input("購入するりんごの個数を入力してください")←<b>コンソールからの入力を受け取り、変数input_countに代入</b><br>...<br>print("購入するりんごの個数は" + <b>input_count</b> + "個です")<br><b>「input」を用いると、コードを実行した際にコンソールに文字を入力できるようになり、その入力された値を受け取ることができます。「変数 = input('コンソールに表示したい文字列')」のように使うとコンソールに入力された値が変数に代入されます。input（意味＝入力）。</b></li>
 				<li><mark>入力した値の型変換</mark>→<br>apple_price = 200<br>input_count = input("りんごの個数を入力してください")←<b>inputで受け取った値は文字列型</b><br>count = int(input_count)←<b>数値型に変換</b><br>total_price = apple_price * count<br>...<br>print("支払い金額は" + str(total_price) + "円です")←<b>total_priceを文字列型に変換して出力</b><br></li>
-				<li></li>
 			</ul>
 
 			<p id="7">７．論理演算子(and,or),not(条件式)</p>
@@ -66,7 +68,7 @@
 			<ul>
 				<li><mark>真偽値</mark>→<br>print(3 == 3)<br>＃結果Trueと表示<br>print(3 == 5)<br>＃結果Falseと表示<br><b>真偽値を扱うデータ型、「真偽値型」という比較演算子を用いた条件式の部分が、成り立つとき「True」、成り立たないとき「False」の2つがある。頭文字は大文字。True（読み=トゥルー、意味＝真）False（読み＝フォールス、意味＝偽）。</b></li>
 				<li><mark>if文と真偽値</mark>→<b>if文では条件式がTrueのときは処理が実行され、Falseのときは処理が実行されない。</b></li>
-				<li><mark>比較演算子(&lt;,&lt;=,&gt;,&gt;=)</mark>→<br><b>比較演算子 - 大小を比べる</b></br><pre>x&lt;y   ←xがyより小さいときTrue<br>x&lt;=y  ←xがyより小さいまたは等しいときTrue<br>x&gt;y   ←xがyより大きいときTrue<br>x&gt;=y  ←xがyより大きいまたは等しいときTrue</pre><br><b>比較演算子には、==や!=といった値の等しさを比較する記号以外に、値の大小を比較する記号がある。</b>条件式が成り立てばTrue,成り立たなければFalseをそれぞれ返す。</li>
+				<li><mark>比較演算子(&lt;,&lt;=,&gt;,&gt;=)</mark>→<br><b>比較演算子 - 大小を比べる</b><br><pre>x&lt;y   ←xがyより小さいときTrue<br>x&lt;=y  ←xがyより小さいまたは等しいときTrue<br>x&gt;y   ←xがyより大きいときTrue<br>x&gt;=y  ←xがyより大きいまたは等しいときTrue</pre><br><b>比較演算子には、==や!=といった値の等しさを比較する記号以外に、値の大小を比較する記号がある。</b>条件式が成り立てばTrue,成り立たなければFalseをそれぞれ返す。</li>
 				<li><mark>else</mark>→<br>score = 50<br>if score == 100<br><pre>    print("よくできました！")<br><b>else:</b><br>    print("頑張りましょう")</pre><br><b>if文にelseを組み合わせることで「もし○○ならば△△を行う、そうでなければ□□を行う」という条件分岐ができるようになる。</b>if文の条件がFalseのときelseの処理を実行する。else（読み＝エルス、意味＝そうでなければ・その他・別の）。</li>
 				<li><mark>elif(1)</mark>→<br>score = 70<br>if score == 100<br><pre>    print("よくできました！")</pre>elif score &gt;= 70<br><pre>    print("まずますです...")←実行される</pre><br>else:<br><pre>    print("がんばりましょう！")</pre><br><b>if文で条件が成り立たなかった場合を複数定義したい場合は、elifを用いる。</b>「もし○○なら△△を行う、××なら▼▼を行う、そうでなければ□□を行う。」elif=else if（読み＝エルイフ、意味＝もしそうでなければ）。</li>
 				<li><mark>elif(2)</mark>→<br>score = 100<br>if score == 100:<br><pre>    print("よくできました")　←<b>最初の条件が成立したのでそれ以降の処理は実行されない</b></pre><br>elif score &gt;= 60:<br><pre>    print("まずますです...") ←<b>条件がTrueでも処理が実行されない</b><br></pre>elif score &gt;= 40:<br>...<br>else:<br>...<br><b>elifはいつでも書けるが、上から順に条件が成り立つか判断され、最初に条件が合致した部分の処理だけが行われる。</b></li>
@@ -76,7 +78,7 @@
 			<p id="5">５．条件分岐,if文,if文条件式(比較演算子==,!=),インデント</p>
 			<ul>
 				<li><mark>条件分岐</mark>→<b>条件（テストの点数）によって処理（成績）を変えるというのが条件分岐。</b></li>
-				<li><mark>if文</mark>→<br>score=100<br>if score == 100: ←<b>条件式が成り立つ</b><br>print("よくできました") ←<b>条件が成り立つの時の処理<br><b>if文を用いると、「もし○○ならば△△を行う」という条件分が行われる</b></li>
+				<li><mark>if文</mark>→<br>score=100<br>if score == 100: ←<b>条件式が成り立つ</b><br>print("よくできました") ←<b>条件が成り立つの時の処理</b><br><b>if文を用いると、「もし○○ならば△△を行う」という条件分が行われる</b></li>
 				<li><mark>if文の条件式</mark>→<br><b>比較演算子 -　等しいか調べる</b><br>x==y ←左右の値が等しいときに成り立つ<br>x!=y ←左右の値が等しくない時に成り立つ<br><br>score = 100<br>if score = 100:<br><b>条件式のなかでは、二つの値を比較する「比較演算子」がよく使われる。</b>if文の条件部分は<b>if条件式：</b>のように書く。</li>
 				<li><mark>インデント</mark>→<br>score = 50<br>if score == 100<br><pre>    print("よくできました")<br>    print("次も頑張りましょう！”）</pre><br>↑※インデントをそろえる。半角スペース４つ分<br>＃結果条件式が成り立たないため表示されない<br><br>score = 50<br>if score == 100<br><pre>    print("よくできました")<br>print("次も頑張りましょう！")</pre><br>↑※インデントが無いためif分外とみなされる<br>＃結果次も頑張りましょう！と表示されてしまう。<br><b>処理がif文内にあるかどうかはインデントによって判別される。</b>条件が成立したときif文の中の処理が実行される。</li>
 			</ul>
@@ -85,7 +87,7 @@
 			<ul>
 				<li><mark>文字列の連結</mark>→<br>print(<b>"hello"+"python"</b>)<br>name="john"<br>print(<b>"my name is"+name</b>)<br><b>数値の計算で用いた＋記号は計算だけでなく文字列の連結も行うことができる。他、変数と文字列や変数と変洲も連結できる。</b></li>
 				<li><mark>データ型</mark>→<br>"hello python"-<b>文字列型</b><br>3-<b>数値型</b><br><b>文字列型や数値型など様々なデータの種類があり、データ型を呼ばれている。</b></li>
-			　<li><mark>データ型の違い</mark>→<br>print(5 + 7)<br>#結果｢12｣←<b>数値の計算</b><br>print("5" + "7")<br>"#結果｢57｣←<b>文字列の連結</b><br><b>データ型が異なるとコードは異なる動作をする。</b></li>
+				<li><mark>データ型の違い</mark>→<br>print(5 + 7)<br>#結果｢12｣←<b>数値の計算</b><br>print("5" + "7")<br>"#結果｢57｣←<b>文字列の連結<br>データ型が異なるとコードは異なる動作をする。</b></li>
 			　<li><mark>型変換str</mark>→<br>price = 100<br>print("りんごの価格は" + price + "円です")<br>#結果エラー←<b>文字型を数値型なので連結できない</b><br>price =100<br>print("りんごの価格は" + str(price) + "円です")<br>#結果りんごの価格は100円です←<b>文字型同士なので連結できる</b><br><b>上のようにデータ型を変換することを「型変換」といい、数値型から文字列型に変換するには「str」を用いる。str=string（読み＝ストリング、意味＝一続き、一列。</b></li>
 			　<li><mark>型変換int</mark>→<br>count = "3"<br>price = 100<br>total_price = price = <b>int</b>(count)<br>print(total_price)<br>#結果300<br><b>上のように文字列型を数値型に変換するにはintを用いる</b>int=integer（読み＝インテジャー、意味＝整数）。</li>
 			</ul>
