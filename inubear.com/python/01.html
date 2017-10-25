@@ -22,12 +22,8 @@
 					<li><a href="#3">３．変数の更新</a></li>
 					<li><a href="#4">４．文字列の連結,データ型,str,int</a></li>
 					<li><a href="#5">５．条件分岐,if文,if文条件式(比較演算子==,!=),インデント</a></li>
-					<li><a href="#6">６．たいとる</a></li>
-					<li><a href="#7">７．たいとる</a></li>
-				</ul>
-			</nav>
-				<nav style="float: left; list-style: noen;">
-				<ul>
+					<li><a href="#6">６．if文と真偽値,比較演算子(&lt;,&lt;=,&gt;,&gt;=),else,elif</a></li>
+					<li><a href="#7">７．論理演算子(and,or),not(条件式)</a></li>
 					<li><a href="#"></a></li>
 					<li><a href="#"></a></li>
 					<li><a href="#"></a></li>
@@ -45,17 +41,34 @@
 			</ul>
 コピペ用-->
 
-			<p id="7">１．タイトル</p>
+			<p id="9">１．タイトル</p>
 			<ul>
 				<li>テキスト</li>
 				<li>テキスト</li>
 			</ul>
 
-
-			<p id="6">１．タイトル</p>
+			<p id="8">１．タイトル</p>
 			<ul>
 				<li>テキスト</li>
 				<li>テキスト</li>
+			</ul>
+
+			<p id="7">７．論理演算子(and,or),not(条件式)</p>
+			<ul>
+				<li><mark>and</mark>→<br><b>論理演算子 - and</b><br>True and True→True<br>True and False→False<br>False and True→False<br>False and False→False<br><br>time = 14<br>if time &gt; 10 <b>and</b> time &lt; 18:<br><pre>    print("就業時間です")</pre><br>＃結果就業時間です<br><b>「条件1も条件2も成り立つ」というような場合の条件式は「条件1 and 条件2」のようにかく。</b>andを用いて複数の条件式を組み合わせるとすべての条件式がTrueの場合全体がTrueとなる。</li>
+				<li><mark>or</mark>→<br><b>論理演算子 - or</b><br>True or True→True<br>True or False→True<br>False or True→False<br>False and False→False<br><br>time = 15<br>if time == 10 <b>or</b> time == 15:<br><pre>    print("おやつの時間です")</pre><br>＃おやつの時間です<br><b>「条件1か条件2が成り立つ」というような場合の条件式は「or」を用いて、「条件1 or 条件2」のように書きます。</b>「or」を用いて複数の条件式を組み合わせると、複数の条件式のうち1つでもTrueであれば全体がTrueとなります。</li>
+				<li><mark>not</mark>→<br>time == 9<br>if <b>not</b> time == 18:<br><pre>    print("退社時間ではありません")</pre><br>＃結果退社時間ではありません<br><b>「not」を用いると、条件の否定をすることができます。</b>「not 条件式」のようにすると、条件式が「True」であれば全体が「False」に、「False」であれば「True」になります。</li>
+			</ul>
+
+
+			<p id="6">６．if文と真偽値,比較演算子(&lt;,&lt;=,&gt;,&gt;=),else,elif</p>
+			<ul>
+				<li><mark>真偽値</mark>→<br>print(3 == 3)<br>＃結果Trueと表示<br>print(3 == 5)<br>＃結果Falseと表示<br><b>真偽値を扱うデータ型、「真偽値型」という比較演算子を用いた条件式の部分が、成り立つとき「True」、成り立たないとき「False」の2つがある。頭文字は大文字。True（読み=トゥルー、意味＝真）False（読み＝フォールス、意味＝偽）。</b></li>
+				<li><mark>if文と真偽値</mark>→<b>if文では条件式がTrueのときは処理が実行され、Falseのときは処理が実行されない。</b></li>
+				<li><mark>比較演算子(&lt;,&lt;=,&gt;,&gt;=)</mark>→<br><b>比較演算子 - 大小を比べる</b></br><pre>x&lt;y   ←xがyより小さいときTrue<br>x&lt;=y  ←xがyより小さいまたは等しいときTrue<br>x&gt;y   ←xがyより大きいときTrue<br>x&gt;=y  ←xがyより大きいまたは等しいときTrue</pre><br><b>比較演算子には、==や!=といった値の等しさを比較する記号以外に、値の大小を比較する記号がある。</b>条件式が成り立てばTrue,成り立たなければFalseをそれぞれ返す。</li>
+				<li><mark>else</mark>→<br>score = 50<br>if score == 100<br><pre>    print("よくできました！")<br><b>else:</b><br>    print("頑張りましょう")</pre><br><b>if文にelseを組み合わせることで「もし○○ならば△△を行う、そうでなければ□□を行う」という条件分岐ができるようになる。</b>if文の条件がFalseのときelseの処理を実行する。else（読み＝エルス、意味＝そうでなければ・その他・別の）。</li>
+				<li><mark>elif(1)</mark>→<br>score = 70<br>if score == 100<br><pre>    print("よくできました！")</pre>elif score &gt;= 70<br><pre>    print("まずますです...")←実行される</pre><br>else:<br><pre>    print("がんばりましょう！")</pre><br><b>if文で条件が成り立たなかった場合を複数定義したい場合は、elifを用いる。</b>「もし○○なら△△を行う、××なら▼▼を行う、そうでなければ□□を行う。」elif=else if（読み＝エルイフ、意味＝もしそうでなければ）。</li>
+				<li><mark>elif(2)</mark>→<br>score = 100<br>if score == 100:<br><pre>    print("よくできました")　←<b>最初の条件が成立したのでそれ以降の処理は実行されない</b></pre><br>elif score &gt;= 60:<br><pre>    print("まずますです...") ←<b>条件がTrueでも処理が実行されない</b><br></pre>elif score &gt;= 40:<br>...<br>else:<br>...<br><b>elifはいつでも書けるが、上から順に条件が成り立つか判断され、最初に条件が合致した部分の処理だけが行われる。</b></li>
 			</ul>
 
 
@@ -64,7 +77,7 @@
 				<li><mark>条件分岐</mark>→<b>条件（テストの点数）によって処理（成績）を変えるというのが条件分岐。</b></li>
 				<li><mark>if文</mark>→<br>score=100<br>if score == 100: ←<b>条件式が成り立つ</b><br>print("よくできました") ←<b>条件が成り立つの時の処理<br><b>if文を用いると、「もし○○ならば△△を行う」という条件分が行われる</b></li>
 				<li><mark>if文の条件式</mark>→<br><b>比較演算子 -　等しいか調べる</b><br>x==y ←左右の値が等しいときに成り立つ<br>x!=y ←左右の値が等しくない時に成り立つ<br><br>score = 100<br>if score = 100:<br><b>条件式のなかでは、二つの値を比較する「比較演算子」がよく使われる。</b>if文の条件部分は<b>if条件式：</b>のように書く。</li>
-				<li><mark>インデント</mark>→<br>score = 50<br>if score == 100<br><pre>    print("よくできました")<br>    print("次も頑張りましょう！”）</pre><br>↑※インデントをそろえる。半角スペース４つ分<br>＃結果条件式が成り立たないため表示されない<br><br>score = 50<br>if score == 100<br><pre>    print("よくできました")<br>print("次もがんばりましょう！")</pre><br>↑※インデントが無いためif分外とみなされる<br>＃結果次も頑張りましょう！と表示されてしまう。<br><b>処理がif文内にあるかどうかはインデントによって判別される。</b>条件が成立したときif文の中の処理が実行される。</li>
+				<li><mark>インデント</mark>→<br>score = 50<br>if score == 100<br><pre>    print("よくできました")<br>    print("次も頑張りましょう！”）</pre><br>↑※インデントをそろえる。半角スペース４つ分<br>＃結果条件式が成り立たないため表示されない<br><br>score = 50<br>if score == 100<br><pre>    print("よくできました")<br>print("次も頑張りましょう！")</pre><br>↑※インデントが無いためif分外とみなされる<br>＃結果次も頑張りましょう！と表示されてしまう。<br><b>処理がif文内にあるかどうかはインデントによって判別される。</b>条件が成立したときif文の中の処理が実行される。</li>
 			</ul>
 
 			<p id="4">４．文字列の連結,データ型,str,int</p>
