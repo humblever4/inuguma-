@@ -26,6 +26,8 @@
 					<li><a href="#7">７．論理演算子(and,or),not(条件式)</a></li>
 					<li><a href="#8">８．入力を受け取る(input),入力した値の型変換</a></li>
 					<li><a href="#9">９．リスト(変数に代入,要素を取得・更新・追加)</a></li>
+					<li><a href="#10">１０．for文,辞書(書き方,要素の順番・取り出し方)</a></li>
+					<li><a href="#11">１１．辞書の要素の(更新・追加・取り出し方)</a></li>
 					<li><a href="#"></a></li>
 				</ul>
 			</nav>
@@ -40,6 +42,39 @@
 				<li>テキスト</li>
 			</ul>
 コピペ用-->
+
+			<p id="1">１．タイトル</p>
+			<ul>
+				<li>テキスト</li>
+				<li>テキスト</li>
+			</ul>
+
+
+			<p id="1">１．タイトル</p>
+			<ul>
+				<li><mark>while文</mark>→<br> x = 1<b>←条件式で使う変数を定義</b><br>whil x &lt;=100:<b>←条件式</b><br><pre>    print(x)<br>    x += 1<b>←この2行は条件式がTrueの間繰り返される処理を記述（xを出力することと、xの値が１ずつ増えていくこと）</b></pre></pre><br>＃出力結果<br>1<br>2<br>...<br>99<br>100<br>繰り返し処理にはfor文以外にもwhile文というものがある。while文を用いると、「ある条件に当てはまる間、処理を繰り返す」といったことが可能になる。<b>「while 条件式:」のように書く。</b>while(読み＝ワイル、意味＝～する間)</li>
+				<li>テキスト</li>
+			</ul>
+
+
+			<p id="11">１１．辞書の要素の(更新・追加・取り出し方)</p>
+			<ul>
+				<li><mark>辞書の要素の更新</mark>→<br>fruits = {'apple' : 'red','banana' : 'yellow','grape' : 'purple'}<br>fruits["apple"] = 'green'←<b>キー名がappleである要素の値を更新</b><br><b>辞書名[キー名] = 値と書くことで要素の更新をすることができます。</b></li>
+				<li><mark>辞書の要素の追加</mark>→<br>fruits = {'apple' : 'red','banana' : 'yellow','grape' : 'purple'}<br>fruits["peach"] = 'pink'←<b>キー名がpeachである要素の値を追加</b><br>print(fruits)<br>＃結果出力<br>{'peach' : 'pink','apple' : 'red','banana' : 'yellow','grape' : 'purple'}<br><b>「辞書名[新しいキー名] = 値」と書くことで辞書に新しい要素を追加することができる。</b>ただし、辞書にすでにあるキー名を指定すると、値の追加ではなく更新になってしまうので注意。</li>
+				<li><mark>辞書の要素の取出し方</mark>→<br>fruits = {'apple' : 'red','banana' : 'yellow','grape' : 'purple'}<br>for fruit_name in fruits<b>←キーが一つずつ取り出され、変数に代入される</b><br><pre>    print(fruit_name + 'の色は' + fruits[fruit_name] 'です')<b>←キー名を用いて値を取り出す</b></pre><br>リストと同じように、辞書もfor文を用いて要素を1つずつ取り出し、処理を行うことができる。<b>「for 変数名 in 辞書:」と書くことで繰り返し処理をすることができる。</b>ここで定義された変数にそれぞれの要素のキーが1つずつ代入される。要素の値はキーが代入された変数を用いて取り出せる。</li>
+			</ul>
+
+
+			<p id="10">１０．for文,辞書(書き方,要素の順番・取り出し方)</p>
+			<ul>
+				<li><mark>for文の書き方</mark>→<br><pre>foods = [pasta,curry,sushi]<br>for food in foods:<br>    print("好きな食べ物は" + food + "です")<br>＃出力結果<br>好きな食べ物はpastaです<br>好きな食べ物はcurryです<br>好きな食べ物はsushiです</pre><br>for文を使うと、リストの要素を順に取り出して処理を行うことができます。 下図のように<b>「for 変数名 in リスト:」と書くことで、リストの要素の数だけ、処理を繰り返すことができる。</b></li>
+				<li><mark>for文(繰り返し処理)</mark>→<br><pre>foods = [pasta,curry,sushi]<br>for food in foods:<br>    print("好きな食べ物は" + food + "です")←<b>for文の中身</b></pre><br>「for 変数名 in リスト:」とすると変数には、<b>リストの要素が先頭から順に1つずつ入っていき、その上でfor文の中の処理が実行される</b>。処理はリストの要素の数だけ繰り返し行われる（繰り返し処理）。また、変数名は自由ですが、リスト名の単数形にすることが慣習上多い。</li>
+				<li><mark>辞書とは</mark>→辞書は、リストと同じように複数のデータをまとめて管理するのに用いられる。リストとの違いは、個々の要素をインデックス番号ではなくキーと呼ばれる名前を付けて管理する点。辞書ではキーと値のペアが1つの要素となる。</li>
+				<li><mark>辞書の書き方</mark>→<br>fruits = {'apple' : 'red','banana' : 'yellow','grape' : 'purple'}<br>辞書は{キー1: 値1, キー2: 値2, …}のように作る。ほとんどの場合、キーには文字列が使われる。リストは要素を[]で囲んだが、辞書は{}で囲む。キーと値の間はコロン（:）、要素同士の間はコンマ（,）で区切ります。</li>
+				<li><mark>辞書の要素の順番</mark>→<br>fruits = {'apple' : 'red','banana' : 'yellow','grape' : 'purple'}<br>print(fruits><br>＃出力結果<br>{'banana' : 'yellow','grape' : 'purple','apple' : 'red'}←<b>辞書内の要素には順序がないので定義したときの順番と異なる</b></li>
+				<li><mark>辞書の要素の取出し方</mark>→<br>fruits = {'apple' : 'red','banana' : 'yellow','grape' : 'purple'}<br>print('appleの色は' + fruits['apple'] + 'です')<br>＃出力結果<br>appleの色はredです<br><b>辞書の値を取り出すには、取り出したい値に対応する「キー」を用いて辞書名[キー]のように書く。</b></li>
+			</ul>
+
 
 			<p id="9">９．リスト(変数に代入,要素を取得・更新・追加)</p>
 			<ul>
@@ -88,8 +123,8 @@
 				<li><mark>文字列の連結</mark>→<br>print(<b>"hello"+"python"</b>)<br>name="john"<br>print(<b>"my name is"+name</b>)<br><b>数値の計算で用いた＋記号は計算だけでなく文字列の連結も行うことができる。他、変数と文字列や変数と変洲も連結できる。</b></li>
 				<li><mark>データ型</mark>→<br>"hello python"-<b>文字列型</b><br>3-<b>数値型</b><br><b>文字列型や数値型など様々なデータの種類があり、データ型を呼ばれている。</b></li>
 				<li><mark>データ型の違い</mark>→<br>print(5 + 7)<br>#結果｢12｣←<b>数値の計算</b><br>print("5" + "7")<br>"#結果｢57｣←<b>文字列の連結<br>データ型が異なるとコードは異なる動作をする。</b></li>
-			　<li><mark>型変換str</mark>→<br>price = 100<br>print("りんごの価格は" + price + "円です")<br>#結果エラー←<b>文字型を数値型なので連結できない</b><br>price =100<br>print("りんごの価格は" + str(price) + "円です")<br>#結果りんごの価格は100円です←<b>文字型同士なので連結できる</b><br><b>上のようにデータ型を変換することを「型変換」といい、数値型から文字列型に変換するには「str」を用いる。str=string（読み＝ストリング、意味＝一続き、一列。</b></li>
-			　<li><mark>型変換int</mark>→<br>count = "3"<br>price = 100<br>total_price = price = <b>int</b>(count)<br>print(total_price)<br>#結果300<br><b>上のように文字列型を数値型に変換するにはintを用いる</b>int=integer（読み＝インテジャー、意味＝整数）。</li>
+				<li><mark>型変換str</mark>→<br>price = 100<br>print("りんごの価格は" + price + "円です")<br>#結果エラー←<b>文字型を数値型なので連結できない</b><br>price =100<br>print("りんごの価格は" + str(price) + "円です")<br>#結果りんごの価格は100円です←<b>文字型同士なので連結できる</b><br><b>上のようにデータ型を変換することを「型変換」といい、数値型から文字列型に変換するには「str」を用いる str=string（読み＝ストリング、意味＝一続き、一列。</b></li>
+				<li><mark>型変換int</mark>→<br>count = "3"<br>price = 100<br>total_price = price = <b>int</b>(count)<br>print(total_price)<br>#結果300<br><b>上のように文字列型を数値型に変換するにはintを用いる</b>int=integer（読み＝インテジャー、意味＝整数）。</li>
 			</ul>
 
 			<p id="3">３．変数の更新</p>
