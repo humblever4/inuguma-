@@ -28,7 +28,11 @@
 					<li><a href="#9">９．リスト(変数に代入,要素を取得・更新・追加)</a></li>
 					<li><a href="#10">１０．for文,辞書(書き方,要素の順番・取り出し方)</a></li>
 					<li><a href="#11">１１．辞書の要素の(更新・追加・取り出し方)</a></li>
-					<li><a href="#"></a></li>
+					<li><a href="#12">１２．while文,無限ループ,break,continue</a></li>
+					<li><a href="#13">１３．関数とは・関数を作る・関数の使い方</a></li>
+					<li><a href="#1"></a></li>
+					<li><a href="#1"></a></li>
+					<li><a href="#1"></a></li>
 				</ul>
 			</nav>
 		</header>
@@ -38,22 +42,45 @@
 <!--コピペ用　上へ展開していく	
 			<p id="1">１．タイトル</p>
 			<ul>
-				<li>テキスト</li>
-				<li>テキスト</li>
+				<li><mark></mark></li>
+				<li><mark></mark></li>
 			</ul>
 コピペ用-->
 
 			<p id="1">１．タイトル</p>
 			<ul>
-				<li>テキスト</li>
-				<li>テキスト</li>
+				<li><mark></mark></li>
+				<li><mark></mark></li>
 			</ul>
 
 
 			<p id="1">１．タイトル</p>
 			<ul>
-				<li><mark>while文</mark>→<br> x = 1<b>←条件式で使う変数を定義</b><br>whil x &lt;=100:<b>←条件式</b><br><pre>    print(x)<br>    x += 1<b>←この2行は条件式がTrueの間繰り返される処理を記述（xを出力することと、xの値が１ずつ増えていくこと）</b></pre></pre><br>＃出力結果<br>1<br>2<br>...<br>99<br>100<br>繰り返し処理にはfor文以外にもwhile文というものがある。while文を用いると、「ある条件に当てはまる間、処理を繰り返す」といったことが可能になる。<b>「while 条件式:」のように書く。</b>while(読み＝ワイル、意味＝～する間)</li>
-				<li>テキスト</li>
+				<li><mark>引数とは</mark><br>関数を呼び出す際に、関数に値を渡すことができる。この値のことを引数といい、引数を渡すと関数の中でその値を利用することができるようになりる。関数に引数を渡せると、その値によって関数の処理結果を変えることができるので便利。</li>
+				<li><mark>引数を受け取る関数</mark><br><b>引数を受け取る関数の定義</b><br><pre>def 関数名(仮引数):<b>←引数を受け取るための仮引数を指定</b><br>    実行する処理</pre><br><b>コード例</b><br><pre>def hello(name):<br>    print('Hello' + name)</pre><br>関数に引数を渡すには、まず引数を受け取れる関数を定義しなければならない。そのためには、関数の定義部分で、引数を受け取るための箱となる<b>変数（仮引数（かりひきすう））</b>を指定する。</li>
+				<li><mark>関数に引数を渡す</mark><br><pre>def hello(name):←仮引数name<br>    print('Hello' + name)<br>hello('john')<br>hello('kate')    <b>'john'が仮引数nameに代入される</b></pre><br><b>＃出力結果</b><br>Hello john<br>Hello kate       '関数に渡した引数によって出力内容が変わる<br>関数に引数を渡すには、<b>関数名(引数)</b>として関数を呼び出す。渡された引数は、関数の仮引数で指定した変数に代入され、その変数は関数の処理の中で用いることができる。</li>
+				<li><mark>スコープ</mark><br><pre>def hello(name):<br>    print(name)<b>←変数nameはこの関数内のみで使える。変数nameのスコープ（範囲）</b><br><br>print(name)<b>←変数nameのスコープ※エラー</b></pre><br><b>コンソール</b><br>NameError:name'name' is not defined<br>変数には、その変数が使える範囲が存在する。その範囲のことをスコープと呼ぶ。仮引数や関数の中で定義した変数のスコープは関数の中だけとなる。よって、その変数を関数の外で使うことはできない。</li>
+				<li><marK></marK></li>
+				<li><marK></marK></li>
+			</ul>
+
+
+			<p id="13">１３．関数とは・関数を作る・関数の使い方</p>
+			<ul>
+				<li><mark>関数</mark><br>関数とは、ある処理をまとめたプログラムの塊で、printも関数の1つ。本来、コンソールに文字を出力するためには色々なコードを書く必要があるが、printという関数のおかげでprintとだけ書けばいいようになっている。</li>
+				<li><mark>関数について</mark><br>printの他にもPythonにはいくつかの便利な関数が用意されており、それらを使うと様々な処理を簡単に行うことができる。また、関数は自分で作ることもできます。これらの関数を組み合わせることで、プログラムを効率的に作ることができる。</li>
+				<li><mark>関数を作る</mark><br><b>関数の定義</b><br><pre>def 関数名():<br>    実行する処理</pre><br><b>コード例</b><br><pre>def hello():<br>    print("Hello World")</pre><br>関数は「def 関数名():」のように定義する。def=define（読み＝デフ・ディファイン、意味＝定義する）</li>
+				<li><mark>関数の使い方</mark><br><pre>def hello():<br>    print("Hello World")←<b>この2行が関数の定義</b><br><br>hello()←<b>関数の呼び出し</b></pre><br>関数は定義しただけでは実行されないので、呼び出して実行する。関数名()のように() をつけて呼び出す。ただし、関数は定義した後でしか呼び出せないので気をつける。</li>
+				
+			</ul>
+
+
+			<p id="12">１２．while文,無限ループ,break,continue</p>
+			<ul>
+				<li><mark>while文</mark>→<br> x = 1<b>←条件式で使う変数を定義</b><br>whil x &lt;=100:<b>←条件式</b><br><pre>    print(x)<br>    x += 1<b>←この2行は条件式がTrueの間繰り返される処理を記述（xを出力することと、xの値が１ずつ増えていくこと）</b></pre><br>＃出力結果<br>1<br>2<br>...<br>99<br>100<br>繰り返し処理にはfor文以外にもwhile文というものがある。while文を用いると、「ある条件に当てはまる間、処理を繰り返す」といったことが可能になる。<b>「while 条件式:」のように書く。</b>while(読み＝ワイル、意味＝～する間)</li>
+				<li><mark>無限ループ</mark>→while文では、処理の最後に変数の値を更新し忘れると、条件が常にTrueになってしまうので、繰り返し処理が無限に行われる（無限ループ）。<b>無限ループはコンピュータに異常な負荷をかけることになるので、確実に阻止しなければならない。繰り返し処理では、必ずどこかで条件がFalseになるように実装すること。</b></li>
+				<li><mark>break</mark><br><pre>numbers = [1,2,3,4,5,6]<br>for number in numbers:<br>    print(number)<br>    if number ==3:<br>        break←x<b>が3になった時点で繰り返し処理終了</b></pre><br><b>breakを用いると繰り返し処理を終了することができる。if文などの条件分岐と組み合わせて使う。while文でも同じように使うことができる。</b></li>
+				<li><mark>continue</mark><br><pre>numbers = [1,2,3,4,5,6]<br>for number in numbers:<br>    if number % 2 == 0:<br>        continue<b>←numberが2で割り切れる（偶数）とき、その周の繰り返しをスキップ</b><br>    print(number)</pre><br>繰り返し処理を終了するbreakと違い、continueはその周の処理だけをスキップすることができる。continueもif文などと組み合わせて利用する。while文でも同じように使うことができる。</li>
 			</ul>
 
 
@@ -71,7 +98,7 @@
 				<li><mark>for文(繰り返し処理)</mark>→<br><pre>foods = [pasta,curry,sushi]<br>for food in foods:<br>    print("好きな食べ物は" + food + "です")←<b>for文の中身</b></pre><br>「for 変数名 in リスト:」とすると変数には、<b>リストの要素が先頭から順に1つずつ入っていき、その上でfor文の中の処理が実行される</b>。処理はリストの要素の数だけ繰り返し行われる（繰り返し処理）。また、変数名は自由ですが、リスト名の単数形にすることが慣習上多い。</li>
 				<li><mark>辞書とは</mark>→辞書は、リストと同じように複数のデータをまとめて管理するのに用いられる。リストとの違いは、個々の要素をインデックス番号ではなくキーと呼ばれる名前を付けて管理する点。辞書ではキーと値のペアが1つの要素となる。</li>
 				<li><mark>辞書の書き方</mark>→<br>fruits = {'apple' : 'red','banana' : 'yellow','grape' : 'purple'}<br>辞書は{キー1: 値1, キー2: 値2, …}のように作る。ほとんどの場合、キーには文字列が使われる。リストは要素を[]で囲んだが、辞書は{}で囲む。キーと値の間はコロン（:）、要素同士の間はコンマ（,）で区切ります。</li>
-				<li><mark>辞書の要素の順番</mark>→<br>fruits = {'apple' : 'red','banana' : 'yellow','grape' : 'purple'}<br>print(fruits><br>＃出力結果<br>{'banana' : 'yellow','grape' : 'purple','apple' : 'red'}←<b>辞書内の要素には順序がないので定義したときの順番と異なる</b></li>
+				<li><mark>辞書の要素の順番</mark>→<br>fruits = {'apple' : 'red','banana' : 'yellow','grape' : 'purple'}<br>print(fruits)<br>＃出力結果<br>{'banana' : 'yellow','grape' : 'purple','apple' : 'red'}←<b>辞書内の要素には順序がないので定義したときの順番と異なる</b></li>
 				<li><mark>辞書の要素の取出し方</mark>→<br>fruits = {'apple' : 'red','banana' : 'yellow','grape' : 'purple'}<br>print('appleの色は' + fruits['apple'] + 'です')<br>＃出力結果<br>appleの色はredです<br><b>辞書の値を取り出すには、取り出したい値に対応する「キー」を用いて辞書名[キー]のように書く。</b></li>
 			</ul>
 
